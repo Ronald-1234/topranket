@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Top de Equipos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="page-head">
+      <span class="eyebrow">RaidOmen</span>
+      <h1>Top de Equipos</h1>
+      <p class="subtitle">Ranking de equipos, estadísticas y detalle de cada jugador.</p>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="tabs" id="mainTabs">
+      <button class="tab-btn active" data-tab="ranking">Ranking de Equipos</button>
+      <button class="tab-btn" data-tab="stats">Estadísticas</button>
+    </nav>
+
+    <!-- SECCIÓN: RANKING -->
+    <section class="tab-panel active" id="panel-ranking">
+      <div class="podium" id="podium"></div>
+
+      <div class="list-head">
+        <h2>Clasificación completa</h2>
+      </div>
+      <ol class="rank-list" id="rankList"></ol>
+
+      <p class="hint">Toca un equipo para ver sus miembros (skin, nombre y rol) desplegados debajo.</p>
+    </section>
+
+    <!-- SECCIÓN: ESTADÍSTICAS  -->
+    <section class="tab-panel" id="panel-stats">
+      <nav class="subtabs" id="statsSubTabs">
+        <button class="subtab-btn active" data-subtab="equipos">Equipos</button>
+        <button class="subtab-btn" data-subtab="jugadores">Jugadores</button>
+      </nav>
+
+      <!-- Estadísticas de equipos -->
+      <div class="subpanel active" id="subpanel-equipos">
+        <div class="stats-table" id="teamStatsTable"></div>
+      </div>
+
+      <!-- Estadísticas de jugadores -->
+      <div class="subpanel" id="subpanel-jugadores">
+        <div class="stats-table" id="playerStatsTable"></div>
+      </div>
+    </section>
+
+    <footer class="note">
+      Datos de ejemplo — todo se edita en el arreglo <code>teams</code> dentro de <code>script.js</code> (nombre, color, logo, integrantes y estadísticas).
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
